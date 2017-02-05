@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html style= "background-color: #D3D3D3">
+
+<body>
+	<center><h1>Sign Up</h1></center>
+		<form class="form-horizontal" style="vertical-align: 50%;"  action="{{url_for('signUp')}}" method="POST">		
+			<div class="form-group">
+	  			<label class="col-md-4 control-label" for="name">Full Name:</label>  
+	  				<div class="col-md-4">
+	  					<input id="name" name="name" placeholder="Name" class="form-control" type="text" required> 
+	  				</div>
+			</div>
+			<div class="form-group">
+	  			<label class="col-md-4 control-label" for="email">E-mail:</label>  
+	  				<div class="col-md-4">
+	  					<input id="email" name="email" placeholder="Email" class="form-control" type="email" required> 
+	  				</div>		
+	  		</div>
+
+							<div class="form-group">
+	  							<label class="col-md-4 control-label" for="password">Password: </label>  
+	  							<div class="col-md-4">
+	  								<input id="password" name="password" placeholder="Password" class="form-control" type="password" required> 
+	  							</div>
+							</div>
+							<div class="form-group">
+	  							<label class="col-md-4 control-label" for="dob">Date of Birth: </label>  
+	  							<div class="col-md-4">
+	  								<input id="day" name="day" placeholder="day" class="form-control" type="number" min="1" max="31" required> 
+	  								<input id="month" name="month" placeholder="month" class="form-control" type="number" min="1" max="12" required>
+	  								<input id="year" name="year" placeholder="year" class="form-control" type="number" min="1900" max="2016" required>
+	  							</div>
+
+	  							<div class="form-group">
+	  							<label class="col-md-4 control-label" for="phone number">Phone Number:</label>  
+	  							<div class="col-md-4">
+	  							<input id="phone_number" name="phone_number" placeholder="Phone_Number" class="form-control" type="phone_number" required> 
+
+
+							</div>
+							Gender:<br>
+							 <form>
+  							<input id = "gender" type="radio" name="gender" value="male" checked> Male
+  							<input id = "gender" type="radio" name="gender" value="female"> Female
+  							<input id = "gender" type="radio" name="gender" value="other"> Other
+							</form> 
+
+							<center><input type="submit" name="submit" class="btn btn-success" value="submit"></center>
+						</form>
+					</div>
+				</div>
+				</center>
+				</div>
+		</div>
+	</div>
+</body>
+
+
+</html>
+
