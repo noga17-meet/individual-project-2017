@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key="this is my project"
 
 
-engine = create_engine('sqlite:///.db')
+engine = create_engine('sqlite:///FizzBuzz.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine, autoflush=False)
 dbsession = DBSession()
@@ -19,12 +19,12 @@ def verify_password(email, password):
 		return True
 
 @app.route('/')
-def home_page():
+def homepage():
 	return render_template('home_page.html')
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
-	if (method == 'POST'):
+	if request.method == 'POST':
 		email = request.form(email)
 		password = request.form(password)
 	else:
@@ -32,7 +32,7 @@ def login():
 
 @app.route('/signup', methods = ['GET', 'POST'])
 def signup():
-	if (method == 'POST'):
+	if request.method == 'POST':
 		full_name = request.form['full_name']
 		email = request.form['email']
 		password = request.form['password']
@@ -43,8 +43,13 @@ def signup():
 		Gender = request.form['gender']
 
 		costumer=costumer(name=name, email=email, dob=dob, password=password, username = username , phone_number = phone_number , gender = gender)
-		dbsession.add(user)
-		dbsession.commit()
+		session.add(costumer)
+		session.commit()
+		return redirect(url_for('cats_page'))
 
 	else:
-		return render_template('signup.html')
+		return render_template('sign_up_page.html')
+
+
+if __name__=='__main__':
+	app.run(debug=True)

@@ -1,24 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
+<title>Cat's Page</title>
 <head>
-  <title>Cat's Addoption</title>
-		
-		<style>
-		
-		#example2 {
-		    border: 10px solid black;
-		    background:url(img_flwr.gif);
-		    background-size: 100px 80px;
-		    background-repeat: no-repeat;
-		    background-origin: content-box;
-		    padding:20px;
-		}
-
-		html { background: url(img_flower.jpg) no-repeat center fixed; background-size: cover; }
-
-		</style>
-
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,7 +13,8 @@
   body {
       position: relative; 
   }
-  #section1 {padding-top:50px;height:650px;color: #fff; background-color: #009688;}
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #708090;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #4682B4;}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -41,13 +27,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="file:///home/student/Desktop/individual-project-2017/templates/home_page. html"> Cat's Addoption</a>
+      <a class="navbar-brand" href="file:///home/student/Desktop/individual-project-2017/templates/cats_page.html">Website Member</a>
     </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="{{url_for('login')}}">Login</a></li>
-          <li><a href="{{url_for('signup')}}">Sign Up</a></li>
+          <li><a href="#section1"> Last Posts</a></li>
+          <li><a href="#section2">Upload</a></li>
+         
             </ul>
           </li>
         </ul>
@@ -57,16 +44,17 @@
 </nav>    
 
 <div id="section1" class="container-fluid">
-  <h1>About Us</h1>
-  <img src="http://img-fotki.yandex.ru/get/4710/114259404.420/0_7c0ac_68890f8_L" height="100" width="100">
-  <img src="https://s-media-cache-ak0.pinimg.com/originals/c6/e3/8e/c6e38edc6b757b7198c3027e624113a4.png" height="100" width="100">
-  <img src="http://cdn.lifezette.com/wp-content/uploads/2015/09/93-Brown-Bag-It_NO-TEXT-2.png" height="120" width="100">
-  <img src="http://www.latchnvent.com/wp-content/themes/twentythirteen-child/images/text-5-cat.png" height="100" width="200">
-  <img src="http://www.yappaville.com/wp-content/uploads/2016/09/cat.png" height="100" width="120">
-  <img src="http://www.cats.org.uk/uploads/branches/211/cats.png" height="120" width="200">
-  <img src="http://pngimg.com/upload/cat_PNG104.png" height="130" width="130">
+  <head><center><h1>Welcome</h1></center></head>
+<h3>Here you can find last posts</h3>
+<img src="http://userscontent2.emaze.com/images/96ac974f-8637-4913-a592-f72c8e6a2eb4/798d0125-a26b-4b0d-b665-95b75414c4e4image4.jpeg" width="300" height="200" >
+<img src="http://www.vetsite.co.il/image/users/129024/ftp/my_files/dreamstime_7277549.jpg?id=3555548" width="300" height="200" border="5">
+
+</div>
+<div id="section2" class="container-fluid">
+  <h1>Upload</h1>
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+
 </div>
 
 </body>
